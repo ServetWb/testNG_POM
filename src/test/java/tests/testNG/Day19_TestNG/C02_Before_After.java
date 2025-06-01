@@ -1,4 +1,4 @@
-package tests.testNG;
+package tests.testNG.Day19_TestNG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
