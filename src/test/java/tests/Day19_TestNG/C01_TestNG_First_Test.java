@@ -1,4 +1,4 @@
-package tests.testNG.Day19_TestNG;
+package tests.Day19_TestNG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -10,9 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class C01_TestNG_FirstTest {
-
-
+public class C01_TestNG_First_Test {
     @Test
     public void searchTest() {
         // Set up necessary configurations
