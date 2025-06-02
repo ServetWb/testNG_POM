@@ -30,7 +30,7 @@ public class C04_DependsOnMethods {
             But if you try to run **only B**, it will first execute A,
             and **only if A passes**, it runs B.
 
-        ⚠ BUT this behavior works **only for direct dependencies**.
+        ⚠ BUT this behavior works ** only for direct dependencies**.
           If you have A → B → C and you try to run only C directly,
           it will say: “No tests were found,” because it can’t auto-traverse multiple layers.
      */
