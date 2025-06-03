@@ -19,5 +19,6 @@ public static WebDriver driver;
     }
     public static void quitDriver(){
         driver.quit();
+        driver=null;
     }
 }
