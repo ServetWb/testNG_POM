@@ -26,10 +26,10 @@ public class TestAutomationPage {
     public WebElement searchResultText;
 
     @FindBy(className = "prod-img")
-    public List<WebElement> searchResultItems;
+    public List<WebElement> foundProductElementsList;
 
     @FindBy(xpath = "//*[@class=' heading-sm mb-4']")
-    public WebElement productNameOnDetailPage;
+    public WebElement firstProductNameElement;
 
     @FindBy(xpath = "(//span[@class='menu-icon-text'])[1]")
     public WebElement accountLink;
