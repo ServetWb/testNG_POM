@@ -35,10 +35,10 @@ public class TestAutomationPage {
     public WebElement accountLink;
 
     @FindBy(xpath = "//input[@id='email']")
-    public WebElement emailField;
+    public WebElement emailBox;
 
     @FindBy(xpath = "//input[@id='password']")
-    public WebElement passwordField;
+    public WebElement passwordBox;
 
     @FindBy(id = "submitlogin")
     public WebElement loginButton;
