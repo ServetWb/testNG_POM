@@ -30,14 +30,14 @@ public class C04_NegativeLoginTest {
         testAutomationPage.accountLink.click();
 
         // 3- Valid email, invalid password
-        testAutomationPage.emailField.sendKeys("wise@gmail.com");
-        testAutomationPage.passwordField.sendKeys("54321");
+        testAutomationPage.emailBox.sendKeys("wise@gmail.com");
+        testAutomationPage.passwordBox.sendKeys("54321");
 
         // 4- Attempt to log in
         testAutomationPage.loginButton.click();
 
         // 5- Verify that login was not successful
-        Assert.assertTrue(testAutomationPage.emailField.isDisplayed());
+        Assert.assertTrue(testAutomationPage.emailBox.isDisplayed());
     }
 
     @Test
@@ -51,14 +51,14 @@ public class C04_NegativeLoginTest {
         testAutomationPage.accountLink.click();
 
         // 3- Invalid email, valid password
-        testAutomationPage.emailField.sendKeys("wise111@gmail.com");
-        testAutomationPage.passwordField.sendKeys("123456");
+        testAutomationPage.emailBox.sendKeys("wise111@gmail.com");
+        testAutomationPage.passwordBox.sendKeys("123456");
 
         // 4- Attempt to log in
         testAutomationPage.loginButton.click();
 
         // 5- Verify that login was not successful
-        Assert.assertTrue(testAutomationPage.emailField.isDisplayed());
+        Assert.assertTrue(testAutomationPage.emailBox.isDisplayed());
     }
 
     @Test
@@ -72,13 +72,13 @@ public class C04_NegativeLoginTest {
         testAutomationPage.accountLink.click();
 
         // 3- Invalid email, invalid password
-        testAutomationPage.emailField.sendKeys("wise111@gmail.com");
-        testAutomationPage.passwordField.sendKeys("654321");
+        testAutomationPage.emailBox.sendKeys("wise111@gmail.com");
+        testAutomationPage.passwordBox.sendKeys("654321");
 
         // 4- Attempt to log in
         testAutomationPage.loginButton.click();
 
         // 5- Verify that login was not successful
-        Assert.assertTrue(testAutomationPage.emailField.isDisplayed());
+        Assert.assertTrue(testAutomationPage.emailBox.isDisplayed());
     }
 }

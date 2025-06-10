@@ -18,10 +18,10 @@ public class C03_PositiveLoginTest {
         testAutomationPage.accountLink.click();
 
         // 3- Enter a valid email address
-        testAutomationPage.emailField.sendKeys("wise@gmail.com");
+        testAutomationPage.emailBox.sendKeys("wise@gmail.com");
 
         // 4- Enter a valid password
-        testAutomationPage.passwordField.sendKeys("123456");
+        testAutomationPage.passwordBox.sendKeys("123456");
 
         // 5- Click the Login button
         testAutomationPage.loginButton.click();

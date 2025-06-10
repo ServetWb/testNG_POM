@@ -40,11 +40,11 @@ public class C05_UsingTestData {
 
         // 3- Enter valid user email
         // testAutomationPage.emailField.sendKeys("wise@gmail.com"); // Not dynamic
-        testAutomationPage.emailField.sendKeys(ConfigReader.getProperty("toValidEmail")); // Dynamic
+        testAutomationPage.emailBox.sendKeys(ConfigReader.getProperty("toValidEmail")); // Dynamic
 
         // 4- Enter valid user password
         // testAutomationPage.passwordField.sendKeys("123456"); // Not dynamic
-        testAutomationPage.passwordField.sendKeys(ConfigReader.getProperty("toValidPassword")); // Dynamic
+        testAutomationPage.passwordBox.sendKeys(ConfigReader.getProperty("toValidPassword")); // Dynamic
 
         // 5- Click the Login button
         testAutomationPage.loginButton.click(); // Dynamic

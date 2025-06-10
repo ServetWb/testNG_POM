@@ -19,14 +19,14 @@ public class C07_DynamicNegativeLoginTest {
 
         // 3- Create a test method:
         //    - valid email, invalid password
-        testAutomationPage.emailField.sendKeys(ConfigReader.getProperty("toValidEmail"));
-        testAutomationPage.passwordField.sendKeys(ConfigReader.getProperty("toInvalidPassword"));
+        testAutomationPage.emailBox.sendKeys(ConfigReader.getProperty("toValidEmail"));
+        testAutomationPage.passwordBox.sendKeys(ConfigReader.getProperty("toInvalidPassword"));
 
         // 4- Click the login button to attempt login
         testAutomationPage.loginButton.click();
 
         // 5- Verify that login was not successful
-        Assert.assertTrue(testAutomationPage.emailField.isDisplayed());
+        Assert.assertTrue(testAutomationPage.emailBox.isDisplayed());
 
     }
 }

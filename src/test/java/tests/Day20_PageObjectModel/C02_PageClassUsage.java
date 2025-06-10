@@ -41,17 +41,17 @@ public class C02_PageClassUsage {
         // 3. Verify that 4 products are listed in the results
 
         int expectedProductCount = 4;
-        int actualProductCount = testAutomationPage.searchResultItems.size();
+        int actualProductCount = testAutomationPage.foundProductElementsList.size();
 
         Assert.assertEquals(actualProductCount, expectedProductCount);
 
         // 4. Click on the first product
-        testAutomationPage.searchResultItems.get(0).click();
+        testAutomationPage.foundProductElementsList.get(0).click();
 
         // Verify that the product name on the opened page
         // contains the word "phone" (case-insensitive)
         String expectedNameContent = "phone";
-        String actualName = testAutomationPage.productNameOnDetailPage.getText().toLowerCase();
+        String actualName = testAutomationPage.firstProductNameElement.getText().toLowerCase();
 
         Assert.assertTrue(actualName.contains(expectedNameContent));
 
