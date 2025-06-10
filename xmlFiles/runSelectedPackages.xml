@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Run all classes in the day19 and day21 packages
+
+    IF you write <package name="tests.*"></package>
+    it will execute all packages under "tests"
+
+    WHICH MEANS all test classes will be executed
+-->
+
+<suite name="package test suite">
+    <test name="package execution">
+        <packages>
+            <package name="tests.day19_testNG"></package>
+            <package name="tests.Day21_pageObjectModel_testNgAssertions"></package>
+        </packages>
+    </test>
+</suite>
