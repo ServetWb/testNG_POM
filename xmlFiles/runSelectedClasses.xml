@@ -1,0 +1,48 @@
+
+
+<!--
+    An XML file
+    allows TestNG to run the specified test files collectively on our behalf.
+
+    To ensure this works correctly:
+
+    1- At the top of each XML file, you must include:
+       <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+       This tells TestNG how to interpret the file.
+
+    2- According to the test hierarchy,
+       you must use appropriate XML tags
+       to define which test files you want to run.
+
+       TestNG test hierarchy:
+       - test suite
+       - test
+       - package, class, test method, or test groups
+
+       Task 1: For the smoke test, we need to run the following classes every day:
+       day19 → C04
+       day20 → C02, C03, C04
+       day21 → C03, C04
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test suite">
+    <test name="Smoke tests">
+
+        <classes>
+
+            <class name="tests.Day19_TestNG.C04_DependsOnMethods"></class>
+            <class name="tests.Day20_PageObjectModel.C02_PageClassUsage"></class>
+            <class name="tests.Day20_PageObjectModel.C03_PositiveLoginTest"></class>
+            <class name="tests.Day20_PageObjectModel.C04_NegativeLoginTest"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C03_HardAssert"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
+
+        </classes>
+
+
+    </test>
+
+
+</suite>
