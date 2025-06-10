@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+        For the system test, run the following tests:
+        All of day19
+        From day20:
+            - The method 'gecersizPasswordTesti' inside class C04
+            - Class C05
+        From day21:
+            - Class C02
+            - Class C04
+-->
+
+<suite name="system test suite">
+    <test name="system test">
+
+        <packages>
+            <package name="tests.day19_testNG"></package>
+        </packages>
+
+        <classes>
+            <class name="tests.Day20_PageObjectModel.C04_NegativeLoginTest">
+                <methods>
+                    <!-- 
+                        Method selection is not used to include *all* methods in a class.
+                        If you want to run all methods, it's better to include the whole class directly.
+                        The logic behind method selection supports two options:
+                        - Run only the following specific methods
+                        - Exclude the following methods and run all others
+                    -->
+                    <include name="NegativeLoginTest"></include>
+                </methods>
+            </class>
+<class name="tests.Day20_PageObjectModel.C05_UsingTestData"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C02_UsingSingletonPattern"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
+        </classes>
+
+    </test>
+</suite>
