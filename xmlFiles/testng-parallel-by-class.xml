@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"
+
+        >
+
+<!--
+    Parallel execution in TestNG
+    can be configured in a very simple way.
+    BUTTTTT unfortunately, it is NOT KNOWN to work very efficiently.
+
+    So, although the idea is great in theory,
+    we DO NOT RECOMMEND using parallel execution in TestNG.
+
+    To configure it,
+    within the <suite> tag, you just need to set two simple options:
+    - thread-count: the number of browsers (threads) to run simultaneously
+    - parallel: how will the workload be divided between browsers?
+                by class, by method,
+                or test-wise where each browser runs predefined tests?
+    - verbose: not mandatory
+               controls the level of logging detail when a test fails
+               takes a numeric value from
+               1 - least output
+               to
+               10 - most detailed output
+-->
+
+<suite name="Smoke Test Suite" thread-count="2" parallel="classes" verbose="5">
+    <test name="Smoke tests">
+
+        <classes>
+            <class name="tests.Day19_TestNG.C04_DependsOnMethods"></class>
+            <class name="tests.Day20_PageObjectModel.C02_PageClassUsage"></class>
+            <class name="tests.Day20_PageObjectModel.C03_PositiveLoginTest"></class>
+            <class name="tests.Day20_PageObjectModel.C04_NegativeLoginTest"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C03_HardAssert"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
+           
+        </classes>
+
+    </test>
+</suite>
