@@ -1,0 +1,34 @@
+<!--
+    In parallel execution, when distributing the workload among browsers,
+    the goals are:
+
+    - to minimize overlap,
+    - to balance workload equally across browsers,
+    - to ensure dependent methods run correctly.
+
+    To achieve this, we can divide the workload by using separate <test> tags for each browser.
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+        <suite name="Smoke Test Suite" parallel="tests" thread-count="2">
+
+        <test name="Smoke tests parallel browser1">
+
+        <classes>
+        <class name="tests.Day19_TestNG.C04_DependsOnMethods"></class>
+        <class name="tests.Day20_PageObjectModel.C02_PageClassUsage"></class>
+        <class name="tests.Day20_PageObjectModel.C03_PositiveLoginTest"></class>
+        </classes>
+        </test>
+
+        <test name="Smoke tests parallel browser2">
+        <classes>
+            <class name="tests.Day20_PageObjectModel.C04_NegativeLoginTest"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C03_HardAssert"></class>
+            <class name="tests.Day21_pageObjectModel_testNgAssertions.C04_SoftAssertion"></class>
+        </classes>
+
+        </test>
+
+        </suite>
