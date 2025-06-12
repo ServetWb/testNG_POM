@@ -289,4 +289,24 @@ public class ReusableMethods {
         }
     }
 
+    public static String addScreenshotToReport (String testName) throws IOException{
+        // Get current timestamp for unique filename
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("_yyMMdd_HHmmss");
+        String date = localDateTime.format(formatter); // e.g. _241219_080623
+
+        // Step 1: Create TakesScreenshot object and capture temporary screenshot
+        TakesScreenshot screenshotTaker = (TakesScreenshot) Driver.getDriver();
+        File tempFile = screenshotTaker.getScreenshotAs(OutputType.FILE);
+
+        // Step 2: Define path and create destination file for saving the actual screenshot
+        String filePath = System.getProperty("user.dir") + "/test-output/Screenshots/" + testName + date + ".jpg";
+        File finalScreenshotFile = new File(filePath);
+
+        // Step 3: Copy temporary screenshot to final destination
+        FileUtils.copyFile(tempFile, finalScreenshotFile);
+
+        return filePath; // Return the path of the saved screenshot
+    }
+
 }
